@@ -11,16 +11,16 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="bg-black text-white min-h-screen">
-      {/* Hero Header */}
-      <section className="relative py-24 bg-gradient-to-b from-neutral-900 via-neutral-950 to-black border-b border-neutral-800">
+    <div className="bg-[#FAF8F5] text-[#161413] min-h-screen">
+      {/* Hero Header - Black Layer Under Navbar */}
+      <section className="relative py-20 bg-[#0A0708] text-white border-b border-neutral-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+            <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none text-white">
               The Making of a <br />
-              <span className="text-red-500">Nightmare</span>
+              <span className="text-[#E31837]">Nightmare</span>
             </h1>
-            <p className="text-lg text-neutral-300 leading-relaxed pt-2">
+            <p className="text-base sm:text-lg text-neutral-300 leading-relaxed pt-2 font-normal">
               From Enugu, Nigeria to dominating Arrowhead Stadium as the 1989 NFL Rushing Champion. The true story of the most imposing fullback in football history.
             </p>
           </div>
@@ -31,10 +31,10 @@ export default function AboutPage() {
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Text */}
-          <div className="lg:col-span-7 space-y-8 text-neutral-300 text-base sm:text-lg leading-relaxed">
+          <div className="lg:col-span-7 space-y-8 text-stone-700 text-base sm:text-lg leading-relaxed">
             <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-black uppercase text-white tracking-wide flex items-center space-x-2">
-                <Flame className="w-6 h-6 text-red-500" />
+              <h2 className="text-2xl sm:text-3xl font-black uppercase text-[#161413] tracking-wide flex items-center space-x-2">
+                <Flame className="w-6 h-6 text-[#C8102E]" />
                 <span>The Unlikely Journey to America</span>
               </h2>
               <p>
@@ -45,18 +45,18 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-neutral-900/70 border border-neutral-800 space-y-3">
-              <h3 className="text-lg font-bold text-amber-400 flex items-center space-x-2">
+            <div className="p-6 rounded-2xl bg-white border border-[#EAE5DE] shadow-xs space-y-3">
+              <h3 className="text-lg font-bold text-[#C8102E] flex items-center space-x-2">
                 <Award className="w-5 h-5" />
                 <span>Collegiate Accolades</span>
               </h3>
-              <p className="text-sm text-neutral-300">
+              <p className="text-sm text-stone-600 font-medium">
                 At Azusa Pacific, Christian rushed for 3,572 yards and 43 touchdowns across just 32 games, earning NAIA All-American honors and proving that his physical tools were ready for the biggest stage.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-black uppercase text-white tracking-wide">
+              <h2 className="text-2xl sm:text-3xl font-black uppercase text-[#161413] tracking-wide">
                 Chiefs Greatness &amp; The 1989 Title
               </h2>
               <p>
@@ -68,7 +68,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-black uppercase text-white tracking-wide">
+              <h2 className="text-2xl sm:text-3xl font-black uppercase text-[#161413] tracking-wide">
                 Induction into the Chiefs Hall of Fame
               </h2>
               <p>
@@ -79,8 +79,8 @@ export default function AboutPage() {
 
           {/* Right Sticky Card */}
           <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-            <div className="rounded-3xl overflow-hidden border border-neutral-800 bg-neutral-900/90 shadow-2xl">
-              <div className="relative aspect-4/3 w-full overflow-hidden bg-neutral-950">
+            <div className="rounded-3xl overflow-hidden border border-[#EAE5DE] bg-white shadow-xl">
+              <div className="relative aspect-4/3 w-full overflow-hidden bg-stone-100">
                 <img
                   src="/images/christian-okoye-2.jpg"
                   alt="Christian Okoye"
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-4">
-                  <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
+                  <span className="text-xs font-bold uppercase tracking-widest text-amber-300">
                     Chiefs Enshrinement
                   </span>
                   <p className="text-sm font-black text-white">Christian Okoye #35</p>
@@ -96,61 +96,61 @@ export default function AboutPage() {
               </div>
 
               <div className="p-6 space-y-6">
-                <h3 className="text-xl font-black uppercase text-white tracking-wider border-b border-neutral-800 pb-3">
+                <h3 className="text-xl font-black uppercase text-[#161413] tracking-wider border-b border-[#EAE5DE] pb-3">
                   Career Profile
                 </h3>
 
-              <div className="space-y-4 text-sm">
-                <div className="flex justify-between py-1 border-b border-neutral-800/60">
-                  <span className="text-neutral-400">Position</span>
-                  <span className="font-bold text-white">Fullback / Running Back</span>
+                <div className="space-y-4 text-sm">
+                  <div className="flex justify-between py-1 border-b border-stone-100">
+                    <span className="text-stone-500 font-medium">Position</span>
+                    <span className="font-bold text-[#161413]">Fullback / Running Back</span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-stone-100">
+                    <span className="text-stone-500 font-medium">Jersey Number</span>
+                    <span className="font-bold text-[#C8102E]">#35 (Chiefs)</span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-stone-100">
+                    <span className="text-stone-500 font-medium">NFL Draft</span>
+                    <span className="font-bold text-[#161413]">1987 / Round 2 / Pick 35</span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-stone-100">
+                    <span className="text-stone-500 font-medium">Height / Weight</span>
+                    <span className="font-bold text-[#161413]">6&apos;1&quot; / 260 lbs</span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-stone-100">
+                    <span className="text-stone-500 font-medium">College</span>
+                    <span className="font-bold text-[#161413]">Azusa Pacific University</span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-stone-100">
+                    <span className="text-stone-500 font-medium">Hometown</span>
+                    <span className="font-bold text-[#161413]">Enugu, Nigeria</span>
+                  </div>
                 </div>
-                <div className="flex justify-between py-1 border-b border-neutral-800/60">
-                  <span className="text-neutral-400">Jersey Number</span>
-                  <span className="font-bold text-red-500">#35 (Chiefs)</span>
-                </div>
-                <div className="flex justify-between py-1 border-b border-neutral-800/60">
-                  <span className="text-neutral-400">NFL Draft</span>
-                  <span className="font-bold text-white">1987 / Round 2 / Pick 35</span>
-                </div>
-                <div className="flex justify-between py-1 border-b border-neutral-800/60">
-                  <span className="text-neutral-400">Height / Weight</span>
-                  <span className="font-bold text-white">6&apos;1&quot; / 260 lbs</span>
-                </div>
-                <div className="flex justify-between py-1 border-b border-neutral-800/60">
-                  <span className="text-neutral-400">College</span>
-                  <span className="font-bold text-white">Azusa Pacific University</span>
-                </div>
-                <div className="flex justify-between py-1 border-b border-neutral-800/60">
-                  <span className="text-neutral-400">Hometown</span>
-                  <span className="font-bold text-white">Enugu, Nigeria</span>
-                </div>
-              </div>
 
-              <div className="pt-2">
-                <Link
-                  href="/store"
-                  className="w-full py-3 px-4 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl flex items-center justify-center space-x-2 transition text-sm shadow-md shadow-red-900/30"
-                >
-                  <span>Shop Authentic Autographs</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <div className="pt-2">
+                  <Link
+                    href="/store"
+                    className="w-full py-3.5 px-4 bg-[#161413] hover:bg-[#C8102E] text-white font-bold rounded-xl flex items-center justify-center space-x-2 transition text-sm shadow-md"
+                  >
+                    <span>Shop Authentic Autographs</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Foundation Plug */}
-            <div className="p-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 space-y-3">
-              <h4 className="text-base font-bold text-amber-400">Life After Football</h4>
-              <p className="text-xs text-neutral-300 leading-relaxed">
+            {/* Foundation Plug */}
+            <div className="p-6 rounded-2xl bg-white border border-[#EAE5DE] shadow-xs space-y-3">
+              <h4 className="text-base font-bold text-[#C8102E]">Life After Football</h4>
+              <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-medium">
                 Today, Christian directs the Christian Okoye Foundation, running free youth athletic clinics and hosting the annual Celebrity Golf Classic to fund youth education.
               </p>
               <Link
                 href="/foundation"
-                className="text-xs font-bold text-white hover:text-amber-400 inline-flex items-center space-x-1"
+                className="text-xs font-bold text-[#C8102E] hover:text-[#9F0B22] inline-flex items-center space-x-1"
               >
                 <span>Discover Foundation Programs</span>
-                <ArrowRight className="w-3 h-3" />
+                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>

@@ -18,49 +18,56 @@ function SuccessContent() {
   }, [clearCart]);
 
   return (
-    <div className="bg-black text-white min-h-screen py-24">
-      <div className="max-w-2xl mx-auto px-4 text-center space-y-8">
-        <div className="w-20 h-20 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto">
+    <div className="bg-[#FAF8F5] text-[#161413] min-h-screen">
+      {/* Black Layer Under Navbar */}
+      <div className="bg-[#0A0708] text-white border-b border-neutral-900 py-10 text-center">
+        <h1 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white">
+          Order Confirmation
+        </h1>
+      </div>
+
+      <div className="max-w-2xl mx-auto px-4 py-16 text-center space-y-8">
+        <div className="w-20 h-20 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto shadow-xs">
           <CheckCircle2 className="w-10 h-10" />
         </div>
 
         <div className="space-y-3">
-          <span className="text-xs uppercase tracking-widest text-emerald-400 font-bold">
+          <span className="text-xs uppercase tracking-widest text-emerald-700 font-bold">
             Order Successfully Placed
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-[#161413]">
             Thank You For Your Order!
-          </h1>
-          <p className="text-neutral-400 text-sm leading-relaxed">
+          </h2>
+          <p className="text-stone-600 text-sm leading-relaxed">
             Your payment has been received and processed securely via Stripe. A detailed receipt and order confirmation has been emailed to you.
           </p>
         </div>
 
         {/* Order Status details */}
-        <div className="p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800 text-left space-y-4">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-white border-b border-neutral-800 pb-3">
+        <div className="p-6 sm:p-8 rounded-3xl bg-white border border-[#EAE5DE] shadow-sm text-left space-y-4">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-[#161413] border-b border-[#EAE5DE] pb-3">
             What Happens Next?
           </h3>
 
-          <div className="space-y-3 text-xs text-neutral-300">
+          <div className="space-y-4 text-xs text-stone-600">
             <div className="flex items-start space-x-3">
-              <ShieldCheck className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+              <ShieldCheck className="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" />
               <div>
-                <strong className="text-white">Authenticity Hologram Assigned:</strong> Your signed memorabilia is verified against Christian Okoye&apos;s serial-numbered archive and matched with its Certificate of Authenticity.
+                <strong className="text-[#161413]">Authenticity Hologram Assigned:</strong> Your signed memorabilia is verified against Christian Okoye&apos;s serial-numbered archive and matched with its Certificate of Authenticity.
               </div>
             </div>
 
             <div className="flex items-start space-x-3">
-              <PackageCheck className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
+              <PackageCheck className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
               <div>
-                <strong className="text-white">Packaging &amp; Protection:</strong> Items are placed in archival protective sleeves or reinforced containers to prevent bending and moisture damage.
+                <strong className="text-[#161413]">Packaging &amp; Protection:</strong> Items are placed in archival protective sleeves or reinforced containers to prevent bending and moisture damage.
               </div>
             </div>
 
             <div className="flex items-start space-x-3">
-              <Truck className="w-4 h-4 text-red-400 mt-0.5 shrink-0" />
+              <Truck className="w-5 h-5 text-[#C8102E] mt-0.5 shrink-0" />
               <div>
-                <strong className="text-white">Insured Shipping:</strong> Tracking details will be automatically emailed to you as soon as your package departs.
+                <strong className="text-[#161413]">Insured Shipping:</strong> Tracking details will be automatically emailed to you as soon as your package departs.
               </div>
             </div>
           </div>
@@ -69,13 +76,13 @@ function SuccessContent() {
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/"
-            className="w-full sm:w-auto px-6 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-xl text-sm transition"
+            className="w-full sm:w-auto px-6 py-3.5 bg-[#C8102E] hover:bg-[#A60D24] text-white font-bold rounded-xl text-sm transition shadow-md shadow-[#C8102E]/20"
           >
             Return to Homepage
           </Link>
           <Link
             href="/store"
-            className="w-full sm:w-auto px-6 py-3 bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white font-bold rounded-xl text-sm transition"
+            className="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-stone-100 text-stone-800 font-bold rounded-xl text-sm border border-[#EAE5DE] transition shadow-xs"
           >
             Continue Browsing Store
           </Link>
@@ -87,7 +94,7 @@ function SuccessContent() {
 
 export default function SuccessPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-black text-white flex items-center justify-center">Loading confirmation...</div>}>
+    <Suspense fallback={<div className="min-h-screen bg-[#FAF8F5] text-[#161413] flex items-center justify-center">Loading confirmation...</div>}>
       <SuccessContent />
     </Suspense>
   );

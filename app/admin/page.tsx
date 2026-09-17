@@ -64,12 +64,12 @@ export default function AdminDashboardPage() {
   const totalRevenue = ordersList.reduce((sum, o) => sum + o.amount, 0);
 
   return (
-    <div className="bg-black text-white min-h-screen py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-neutral-800 pb-6">
+    <div className="bg-[#FAF8F5] text-[#161413] min-h-screen">
+      {/* Header - Black Layer Under Navbar */}
+      <div className="bg-[#0A0708] text-white border-b border-neutral-900 py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <span className="text-xs uppercase font-bold tracking-widest text-amber-500">
+            <span className="text-xs uppercase font-bold tracking-widest text-[#E31837]">
               Custom E-Commerce Platform
             </span>
             <h1 className="text-3xl font-black uppercase text-white tracking-tight mt-1">
@@ -84,64 +84,66 @@ export default function AdminDashboardPage() {
             </span>
             <Link
               href="/store"
-              className="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-xs font-bold rounded-lg transition"
+              className="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-xs font-bold rounded-lg border border-neutral-700 transition shadow-xs"
             >
               View Public Store
             </Link>
           </div>
         </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
         {/* Stats Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800">
+          <div className="p-6 rounded-2xl bg-white border border-[#EAE5DE] shadow-xs">
             <div className="flex items-center justify-between">
-              <span className="text-xs uppercase font-bold text-neutral-400">Total Sales</span>
-              <DollarSign className="w-5 h-5 text-emerald-400" />
+              <span className="text-xs uppercase font-bold text-stone-500">Total Sales</span>
+              <DollarSign className="w-5 h-5 text-emerald-600" />
             </div>
-            <p className="text-2xl font-black text-white mt-2">{formatPrice(totalRevenue)}</p>
-            <p className="text-xs text-neutral-500 mt-1">Processed securely via Stripe</p>
+            <p className="text-2xl font-black text-[#161413] mt-2">{formatPrice(totalRevenue)}</p>
+            <p className="text-xs text-stone-500 mt-1">Processed securely via Stripe</p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800">
+          <div className="p-6 rounded-2xl bg-white border border-[#EAE5DE] shadow-xs">
             <div className="flex items-center justify-between">
-              <span className="text-xs uppercase font-bold text-neutral-400">Recent Orders</span>
-              <ShoppingBag className="w-5 h-5 text-amber-400" />
+              <span className="text-xs uppercase font-bold text-stone-500">Recent Orders</span>
+              <ShoppingBag className="w-5 h-5 text-[#C8102E]" />
             </div>
-            <p className="text-2xl font-black text-white mt-2">{ordersList.length}</p>
-            <p className="text-xs text-neutral-500 mt-1">Pending &amp; fulfilled</p>
+            <p className="text-2xl font-black text-[#161413] mt-2">{ordersList.length}</p>
+            <p className="text-xs text-stone-500 mt-1">Pending &amp; fulfilled</p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800">
+          <div className="p-6 rounded-2xl bg-white border border-[#EAE5DE] shadow-xs">
             <div className="flex items-center justify-between">
-              <span className="text-xs uppercase font-bold text-neutral-400">Active SKUs</span>
-              <Package className="w-5 h-5 text-red-400" />
+              <span className="text-xs uppercase font-bold text-stone-500">Active SKUs</span>
+              <Package className="w-5 h-5 text-[#C8102E]" />
             </div>
-            <p className="text-2xl font-black text-white mt-2">{productsList.length}</p>
-            <p className="text-xs text-neutral-500 mt-1">Signed jerseys, balls, photos</p>
+            <p className="text-2xl font-black text-[#161413] mt-2">{productsList.length}</p>
+            <p className="text-xs text-stone-500 mt-1">Signed jerseys, balls, photos</p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800">
+          <div className="p-6 rounded-2xl bg-white border border-[#EAE5DE] shadow-xs">
             <div className="flex items-center justify-between">
-              <span className="text-xs uppercase font-bold text-neutral-400">Monthly Software Fee</span>
-              <ShieldCheck className="w-5 h-5 text-emerald-400" />
+              <span className="text-xs uppercase font-bold text-stone-500">Monthly Software Fee</span>
+              <ShieldCheck className="w-5 h-5 text-emerald-600" />
             </div>
-            <p className="text-2xl font-black text-emerald-400 mt-2">$0 / mo</p>
-            <p className="text-xs text-neutral-500 mt-1">Self-hosted Next.js vs $39+ Shopify</p>
+            <p className="text-2xl font-black text-emerald-600 mt-2">$0 / mo</p>
+            <p className="text-xs text-stone-500 mt-1">Self-hosted Next.js vs $39+ Shopify</p>
           </div>
         </div>
 
         {/* Section 1: Customer Orders */}
-        <div className="rounded-3xl bg-neutral-900/70 border border-neutral-800 p-6 space-y-6">
+        <div className="rounded-3xl bg-white border border-[#EAE5DE] p-6 sm:p-8 space-y-6 shadow-xs">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-bold text-white uppercase tracking-wider">
+            <h2 className="text-lg font-bold text-[#161413] uppercase tracking-wider">
               Customer Orders &amp; Inscriptions
             </h2>
-            <span className="text-xs text-neutral-400">Real-time fulfillment tracking</span>
+            <span className="text-xs text-stone-500">Real-time fulfillment tracking</span>
           </div>
 
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
-              <thead className="text-xs uppercase text-neutral-400 border-b border-neutral-800 pb-2">
+              <thead className="text-xs uppercase text-stone-500 border-b border-[#EAE5DE] pb-2">
                 <tr>
                   <th className="pb-3 font-semibold">Order ID</th>
                   <th className="pb-3 font-semibold">Customer</th>
@@ -151,33 +153,33 @@ export default function AdminDashboardPage() {
                   <th className="pb-3 font-semibold text-right">Action</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-neutral-800/60">
+              <tbody className="divide-y divide-[#EAE5DE]">
                 {ordersList.map((order) => (
-                  <tr key={order.id} className="hover:bg-neutral-850/50">
-                    <td className="py-4 font-mono text-xs text-neutral-300">{order.id}</td>
+                  <tr key={order.id} className="hover:bg-stone-50/60 transition">
+                    <td className="py-4 font-mono text-xs text-stone-600">{order.id}</td>
                     <td className="py-4">
-                      <div className="font-bold text-white text-xs">{order.customer}</div>
-                      <div className="text-[11px] text-neutral-500">{order.email}</div>
+                      <div className="font-bold text-[#161413] text-xs">{order.customer}</div>
+                      <div className="text-[11px] text-stone-500">{order.email}</div>
                     </td>
                     <td className="py-4 max-w-xs">
-                      <div className="text-xs text-white font-medium">{order.item}</div>
+                      <div className="text-xs text-[#161413] font-medium">{order.item}</div>
                       {order.inscription ? (
-                        <div className="text-[11px] text-amber-400 italic">
+                        <div className="text-[11px] text-[#C8102E] italic">
                           Inscription: &quot;{order.inscription}&quot;
                         </div>
                       ) : (
-                        <div className="text-[11px] text-neutral-500">Standard autograph</div>
+                        <div className="text-[11px] text-stone-500">Standard autograph</div>
                       )}
                     </td>
-                    <td className="py-4 font-bold text-xs text-white">
+                    <td className="py-4 font-bold text-xs text-[#161413]">
                       {formatPrice(order.amount)}
                     </td>
                     <td className="py-4">
                       <span
                         className={`inline-flex px-2.5 py-0.5 rounded-full text-[11px] font-bold ${
                           order.status === 'Shipped'
-                            ? 'bg-emerald-950 text-emerald-400 border border-emerald-800'
-                            : 'bg-amber-950 text-amber-400 border border-amber-800'
+                            ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                            : 'bg-amber-50 text-amber-700 border border-amber-200'
                         }`}
                       >
                         {order.status}
@@ -187,12 +189,12 @@ export default function AdminDashboardPage() {
                       {order.status !== 'Shipped' ? (
                         <button
                           onClick={() => markShipped(order.id)}
-                          className="px-3 py-1 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-lg transition"
+                          className="px-3 py-1 bg-[#C8102E] hover:bg-[#A60D24] text-white font-bold text-xs rounded-lg transition shadow-xs"
                         >
                           Mark Shipped
                         </button>
                       ) : (
-                        <span className="text-[11px] text-neutral-400 font-mono">
+                        <span className="text-[11px] text-stone-500 font-mono">
                           {order.tracking}
                         </span>
                       )}
@@ -205,23 +207,23 @@ export default function AdminDashboardPage() {
         </div>
 
         {/* Section 2: Product Inventory Management */}
-        <div className="rounded-3xl bg-neutral-900/70 border border-neutral-800 p-6 space-y-6">
+        <div className="rounded-3xl bg-white border border-[#EAE5DE] p-6 sm:p-8 space-y-6 shadow-xs">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-bold text-white uppercase tracking-wider">
+            <h2 className="text-lg font-bold text-[#161413] uppercase tracking-wider">
               Stock &amp; Inventory Levels
             </h2>
-            <span className="text-xs text-neutral-400">Click + / - to adjust live stock</span>
+            <span className="text-xs text-stone-500">Click + / - to adjust live stock</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {productsList.map((product) => (
               <div
                 key={product.id}
-                className="p-4 rounded-xl bg-neutral-950 border border-neutral-800 flex items-center justify-between"
+                className="p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE5DE] flex items-center justify-between"
               >
                 <div className="min-w-0 flex-1 pr-4">
-                  <h4 className="text-xs font-bold text-white truncate">{product.name}</h4>
-                  <p className="text-xs font-bold text-amber-400 mt-1">
+                  <h4 className="text-xs font-bold text-[#161413] truncate">{product.name}</h4>
+                  <p className="text-xs font-bold text-[#C8102E] mt-1">
                     {formatPrice(product.price)}
                   </p>
                 </div>
@@ -229,16 +231,16 @@ export default function AdminDashboardPage() {
                 <div className="flex items-center space-x-2 shrink-0">
                   <button
                     onClick={() => updateStock(product.id, -1)}
-                    className="w-7 h-7 rounded-md bg-neutral-800 hover:bg-neutral-700 text-white font-bold flex items-center justify-center text-sm"
+                    className="w-7 h-7 rounded-md bg-white border border-[#EAE5DE] hover:bg-stone-100 text-[#161413] font-bold flex items-center justify-center text-sm shadow-xs"
                   >
                     -
                   </button>
-                  <span className="text-xs font-black w-8 text-center text-white">
+                  <span className="text-xs font-black w-8 text-center text-[#161413]">
                     {product.stock}
                   </span>
                   <button
                     onClick={() => updateStock(product.id, 1)}
-                    className="w-7 h-7 rounded-md bg-neutral-800 hover:bg-neutral-700 text-white font-bold flex items-center justify-center text-sm"
+                    className="w-7 h-7 rounded-md bg-white border border-[#EAE5DE] hover:bg-stone-100 text-[#161413] font-bold flex items-center justify-center text-sm shadow-xs"
                   >
                     +
                   </button>
