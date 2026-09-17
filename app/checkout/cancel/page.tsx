@@ -25,19 +25,20 @@ export default function CancelPage() {
             </p>
           </div>
 
-        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Link
-            href="/store"
-            className="w-full sm:w-auto px-6 py-3 bg-[#C8102E] hover:bg-[#A60D24] text-white font-bold rounded-xl text-sm transition shadow-md shadow-[#C8102E]/20"
-          >
-            Return to Store
-          </Link>
-          <Link
-            href="/"
-            className="w-full sm:w-auto px-6 py-3 bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold rounded-xl text-sm border border-[#EAE5DE] transition"
-          >
-            Home
-          </Link>
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              href="/store"
+              className="w-full sm:w-auto px-6 py-3 bg-[#C8102E] hover:bg-[#A60D24] text-white font-bold rounded-xl text-sm transition shadow-md shadow-[#C8102E]/20"
+            >
+              Return to Store
+            </Link>
+            <Link
+              href="/"
+              className="w-full sm:w-auto px-6 py-3 bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold rounded-xl text-sm border border-[#EAE5DE] transition"
+            >
+              Home
+            </Link>
+          </div>
         </div>
       </div>
     </div>
